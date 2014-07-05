@@ -11,12 +11,12 @@
 	}
 
 	$email = $_POST['email'];
-	
+	$refer = $_POST['refer'];
 
 	if ($email) {
-		$stmt = $mysqli->prepare("INSERT INTO Emails VALUES(?, 0)");
+		$stmt = $mysqli->prepare("INSERT INTO Emails VALUES(?, 0, ?)");
 
-		$stmt->bind_param("s", $email);
+		$stmt->bind_param("ss", $email, $refer);
 
 		if($stmt->execute()){
 			echo "Success";	

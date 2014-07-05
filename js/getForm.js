@@ -33,12 +33,14 @@ $(function() {
 
 	function formSubmit () {
 		var email = $("#email-input").val();
+		var refer = $("#refer").val();
 
 		if(validateEmail(email)){
 
 			$.ajax({
 				type: "POST",
-				data: {email : email},
+				data: {email : email,
+						refer : refer},
 				url: '../email.php',
 				success: function(data) {
 					$("#modal").addClass("md-show");
