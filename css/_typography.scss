@@ -1,0 +1,25 @@
+body {
+	font-family:'proxima-nova', san-serif;
+	font-size:24px;
+	line-height:1.375em;
+	color:$white;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size:2em;
+	line-height:1.1em;
+	font-weight:800;
+	color:$yellow;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-size:1.5em;
+	line-height:1.2em;
+	font-weight:300;
+	margin-top:20px;
+	letter-spacing: 1px;
+}
