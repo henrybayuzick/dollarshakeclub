@@ -27,7 +27,7 @@
 			<div class="md-content">
 				<h1>Thank you!</h1>
 				<p>Thanks for signing up for Dollar Shake Club. You'll be the first to know when we launch. To save an <b>additional 10%</b> simply share this link with your friends and family!</p>
-				<span><?php echo "<a href='$referral' id="refer">$referral</a>"; ?></span>
+				<span><a href='<?php echo $referral; ?>' id='refer'><?php echo $referral; ?></a></span>
 			</div>
 		</div>
 		<div id="page">
