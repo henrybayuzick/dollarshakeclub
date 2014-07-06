@@ -28,7 +28,7 @@
 		$referalCount++;
 
 		$addToReferalCount = $mysqli->prepare("UPDATE Emails SET referal_count = ? WHERE referal = ?");
-		$addToReferalCount->bind_param("is", $referalCount, $referal_link);
+		$addToReferalCount->bind_param("ds", $referalCount, $referal_link);
 
 		$addToReferalCount->execute();
 		echo "set referalCount";
