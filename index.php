@@ -21,7 +21,7 @@
 			return $str;
 		}
 
-		$referral = 'http://dollarshake.club?refer='.randString(10);
+		$referral = randString(10);
 		?>
 
 		<?php
@@ -40,7 +40,7 @@
 			<div class="md-content">
 				<h1>Thank you!</h1>
 				<p>Thanks for signing up for Dollar Shake Club. You'll be the first to know when we launch. To save an <b>additional 10%</b> simply share this link with your friends and family!</p>
-				<span><a href='<?php echo $referral; ?>' id='refer'><?php echo $referral; ?></a></span>
+				<a href='http://dollarshake.club?refer=<?php echo $referral; ?>'>http://dollarshake.club?refer=<span id='refer'><?php echo $referral; ?></span></a>
 			</div>
 		</div>
 		<div id="page">

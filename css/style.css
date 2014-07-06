@@ -214,17 +214,16 @@ body {
   text-align: center; }
   .md-content p {
     margin-top: 20px; }
-  .md-content span {
+  .md-content a {
     font-size: 18px;
     display: inline-block;
     margin-top: 20px;
-    border-bottom: 1px dotted black; }
-    .md-content span a {
-      text-decoration: none;
-      color: #191919;
-      -webkit-transition: color .3s ease; }
-      .md-content span a:hover {
-        color: #777; }
+    border-bottom: 1px dotted black;
+    text-decoration: none;
+    color: #191919;
+    -webkit-transition: color .3s ease; }
+    .md-content a:hover {
+      color: #777; }
 
 .drop-in {
   margin-bottom: -100px;

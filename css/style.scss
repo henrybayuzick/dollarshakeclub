@@ -151,20 +151,17 @@ body {
 		margin-top:20px;
 	}
 
-	span {
+	a {
 		font-size:18px;
 		display:inline-block;
 		margin-top:20px;
 		border-bottom:1px dotted black;
+		text-decoration: none;
+		color:$black;
+		-webkit-transition:color .3s ease;
 
-		a {
-			text-decoration: none;
-			color:$black;
-			-webkit-transition:color .3s ease;
-
-			&:hover {
-				color:#777;
-			}
+		&:hover {
+			color:#777;
 		}
 	}
 }
