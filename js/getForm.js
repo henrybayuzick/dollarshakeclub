@@ -33,7 +33,7 @@ $(function() {
 
 	function formSubmit () {
 		var email = $("#email-input").val();
-		var refer = $("#refer").val();
+		var refer = $("#refer").html();
 
 		if(validateEmail(email)){
 
