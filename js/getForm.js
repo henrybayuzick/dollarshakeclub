@@ -34,7 +34,9 @@ $(function() {
 	function formSubmit () {
 		var email = $("#email-input").val();
 		var refer = $("#refer").html();
-		var referal_link = $("#referal_link").html();
+		var ref = $("#referal_link").html();
+
+		console.log(ref);
 
 		if(validateEmail(email)){
 
@@ -42,7 +44,7 @@ $(function() {
 				type: "POST",
 				data: {email : email,
 						refer : refer,
-						referal_link : referal_link},
+						referal_link : ref},
 				url: '../email.php',
 				success: function(data) {
 					$("#modal").addClass("md-show");

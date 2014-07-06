@@ -12,16 +12,17 @@
 
 	$email = $_POST['email'];
 	$refer = $_POST['refer'];
-
 	$referal_link = $_POST['referal_link'];
 
 	if($referal_link){
-	
+		echo "There is a referal";
+
 		$getReferalCount = $mysqli->prepare("SELECT referal_count FROM Emails WHERE referal = ?");
 		$getReferalCount->bind_param("s", $referal_link);
 
 		if($getReferalCount->execute()){
-			$getReferalCount->bind_result($referalCount);
+				$getReferalCount->bind_result($referalCount);
+				echo "got Referal count";
 		}
 		
 		$referalCount++;
@@ -30,6 +31,7 @@
 		$addToReferalCount->bind_param("is", $referalCount, $referal_link);
 
 		$addToReferalCount->execute();
+		echo "set referalCount";
 	}
 
 
