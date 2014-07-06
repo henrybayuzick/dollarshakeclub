@@ -34,13 +34,15 @@ $(function() {
 	function formSubmit () {
 		var email = $("#email-input").val();
 		var refer = $("#refer").html();
+		var referal_link = $("#referal_link").html();
 
 		if(validateEmail(email)){
 
 			$.ajax({
 				type: "POST",
 				data: {email : email,
-						refer : refer},
+						refer : refer,
+						referal_link : referal_link},
 				url: '../email.php',
 				success: function(data) {
 					$("#modal").addClass("md-show");

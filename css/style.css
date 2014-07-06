@@ -238,3 +238,7 @@ body {
 .fade-in {
   opacity: 1;
   -webkit-transition: all 1s ease; }
+
+#referal_link {
+	display : none;
+}

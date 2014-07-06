@@ -11,7 +11,7 @@
 
 	</head>
 	<body>
-		<?php
+		<?php	
 		function randString($length, $chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz0123456789'){
 			$str = '';
 			$count = strlen($chars);
@@ -22,6 +22,19 @@
 		}
 
 		$referral = 'http://dollarshake.club?refer='.randString(10);
+		?>
+
+		<?php
+		$referal_link = $_GET['refer'];
+		if($referal_link){
+		?>
+			<div id="referal_link"><?php echo $referal_link;?></div>
+		<?php
+		} else {
+		?>	
+			<div id="referal_link"></div>
+		<?php
+		}
 		?>
 		<div id="modal" class="modal md-effect-1" id="modal-1">
 			<div class="md-content">

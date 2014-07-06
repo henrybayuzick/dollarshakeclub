@@ -13,7 +13,7 @@
 	$email = $_POST['email'];
 	$refer = $_POST['refer'];
 
-	$referal_link = $_GET['refer'];
+	$referal_link = $_POST['referal_link'];
 
 	if($referal_link){
 	
