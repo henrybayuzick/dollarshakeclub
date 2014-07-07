@@ -15,18 +15,52 @@
 	$referal_link = $_POST['referal_link'];
 
 	if ($email) {
-		$stmt = $mysqli->prepare("INSERT INTO Emails VALUES(?, 0, ?, 0)");
 
-		$stmt->bind_param("ss", $email, $refer);
+		$e = (string)$email;	
 
-		if($stmt->execute()){
+		$emailTester = $mysqli->prepare("SELECT referal FROM Emails WHERE EmailAddress = ?");
+		$emailTester->bind_param("s", $e);
 
+		if($emailTester->execute()){
+			$emailTester->bind_result($oldReferal);
+			while($emailTester->fetch()){
+			}	
+		} else {
+			$oldReferal = 0;
+		}
+		
+		$emailTester->close();	
+ 
+
+		if($oldReferal){
+			$oldEmail = 1;
+			$sendBackData = array(
+				"message" => "Email exists",
+				"referal" => $oldReferal
+			);
+			echo json_encode($sendBackData);
+		} else {
+			$oldEmail = 0;
+			$sendBackData = array(
+				"message" => "",
+				"referal" => 0
+			);
+			echo json_encode($sendBackData);
 		}
 
+		if($oldEmail == 0){
+			$stmt = $mysqli->prepare("INSERT INTO Emails VALUES(?, 0, ?, 0)");
+
+			$stmt->bind_param("ss", $email, $refer);
+
+			if($stmt->execute()){
+
+			}
+			
+			$stmt->close();
+		}
 	}
 	
-
-	$stmt->close();
 
 	if($referal_link){
 

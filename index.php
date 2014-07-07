@@ -7,7 +7,7 @@
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/base.min.js"></script>
+		<script src="js/getForm.js"></script>
 
 		<meta property="og:site_name" content="Dollar Shake Club"/>
 		<meta property="og:description" content="Protein shakes for just a $1/day. Click here to find out more!"/>
