@@ -53,9 +53,7 @@
 		</div>
 		<div id="page">
 			<header>
-				<svg width="342" height="35">
-					<image xlink:href="images/logo.svg" src="images/logo.png" width="342" height="35" />
-				</svg>
+				<img src="images/logo.png" width="342" height="35" />
 			</header>
 			<section id="grab" class="grab">
 				<h1>We put muscles<br/>on your body</h1>

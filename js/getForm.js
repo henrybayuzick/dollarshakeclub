@@ -48,7 +48,13 @@ $(function() {
 					data = $.parseJSON(data);
 
 					if(data.message == "Email exists"){
-						console.log("need to change modal");
+						$(".md-content h1").html('Slow down there!');
+						$(".md-content p").html('We love your enthusiasm, but you\'ve already signed up! We\'ll update you soon. In the meantime, share the link below with your friends and family!');
+						$(".md-content .referral-link").attr('href','http://dollarshake.club/?refer='+data.referal);
+						$(".md-content .referral-link").html("http://dollarshake.club/?refer=<span id='refer'>"+data.referal+"</span>");
+						$(".md-content .share-buttons .twitter").attr("href", "https://twitter.com/intent/tweet?via=dollarshakeclub&url=http://dollarshake.club/?refer="+data.referal+"&text=Protein shakes for just a $1/day! Find out more at:&hashtags=dollarshakeclub");
+						$(".md-content .share-buttons .fb").attr("href","https://www.facebook.com/sharer/sharer.php?u=http://dollarshake.club/?refer="+data.referal);
+
 					}
 					$("#modal").addClass("md-show");
 				}
