@@ -21,16 +21,16 @@ $(function() {
 	$("#email-input").click(function () {
 		$("#notify-me").html("Notify me");
 	});
-/*
-	$('#email-form').bind("keyup keypress", function(e) {
-		var code = e.keyCode || e.which; 
-		if (code  == 13) {               
-			e.preventDefault();
-			formSubmit();
-			return false;
-		}
-	});
-*/
+
+	// $('#email-form').bind("keyup keypress", function(e) {
+	// 	var code = e.keyCode || e.which; 
+	// 	if (code  == 13) {               
+	// 		e.preventDefault();
+	// 		formSubmit();
+	// 		return false;
+	// 	}
+	// });
+
 	function formSubmit () {
 		var email = $("#email-input").val();
 		var refer = $("#refer").html();
@@ -56,4 +56,4 @@ $(function() {
 			$("#notify-me").html("Invalid email");
 		}	
 	}
-
+});
