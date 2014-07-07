@@ -21,7 +21,7 @@ $(function() {
 	$("#email-input").click(function () {
 		$("#notify-me").html("Notify me");
 	});
-
+/*
 	$('#email-form').bind("keyup keypress", function(e) {
 		var code = e.keyCode || e.which; 
 		if (code  == 13) {               
@@ -30,7 +30,7 @@ $(function() {
 			return false;
 		}
 	});
-
+*/
 	function formSubmit () {
 		var email = $("#email-input").val();
 		var refer = $("#refer").html();
