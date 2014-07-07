@@ -16,8 +16,12 @@ body {
 	margin:0 auto;
 }
 
+header {
+	margin:0 auto;
+	margin-top:30px;
+}
+
 .grab {
-	margin-top:20px;
 	position:relative;
 	top:0;
 	opacity:0;
@@ -73,6 +77,18 @@ body {
 	p {
 		margin-top:20px;
 		width:550px;
+	}
+
+	@media all and (max-width: 611px) {
+		.button {
+			width:360px;
+			margin-top:10px;
+		}
+
+		p {
+			width:100%;
+			margin-bottom:20px;
+		}
 	}
 }
 
@@ -151,7 +167,7 @@ body {
 		margin-top:20px;
 	}
 
-	a {
+	a.referral-link {
 		font-size:18px;
 		display:inline-block;
 		margin-top:20px;
@@ -182,4 +198,55 @@ body {
 
 #referal_link {
 	display:none;
+}
+
+.share-buttons {
+	text-align: auto;
+}
+
+.share-button {
+	display:inline-block;
+	color:$black;
+	height:50px;
+	width:180px;
+	background:$yellow;
+	text-align: center;
+	font-size:18px;
+	line-height: 50px;
+	font-weight:700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border:0;
+	margin-top:40px;
+	text-decoration: none;
+	-webkit-transition:background 0.3s ease;
+
+	&:hover {
+		background:$dark-yellow;
+		cursor:pointer;
+	}
+
+	&.twitter:before {
+		content:'';
+		float:left;
+		position:relative;
+		top:13px;
+		left:25px;
+		background: url(../images/twitter.png) no-repeat;
+  		background-image: url(../images/twitter.svg), none;
+		width:31;
+		height:25px;
+	}
+
+	&.fb:before {
+		content:'';
+		float:left;
+		position:relative;
+		top:11px;
+		left:25px;
+		background: url(../images/facebook.png) no-repeat;
+  		background-image: url(../images/facebook.svg), none;
+		width:15;
+		height:30px;
+	}
 }

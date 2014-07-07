@@ -23,3 +23,9 @@ h2 {
 	margin-top:20px;
 	letter-spacing: 1px;
 }
+
+@media all and (max-width: 611px) {
+	body {
+		font-size:20px;
+	}
+}
