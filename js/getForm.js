@@ -44,6 +44,12 @@ $(function() {
 						referal_link : ref},
 				url: '../email.php',
 				success: function(data) {
+					
+					data = $.parseJSON(data);
+
+					if(data.message == "Email exists"){
+						console.log("need to change modal");
+					}
 					$("#modal").addClass("md-show");
 				}
 			});
