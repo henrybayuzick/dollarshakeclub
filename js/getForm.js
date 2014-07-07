@@ -22,21 +22,18 @@ $(function() {
 		$("#notify-me").html("Notify me");
 	});
 
-	// $('#email-form').bind("keyup keypress", function(e) {
-	// 	var code = e.keyCode || e.which; 
-	// 	if (code  == 13) {               
-	// 		e.preventDefault();
-	// 		formSubmit();
-	// 		return false;
-	// 	}
-	// });
+	$('#email-form').keypress(function(e){
+		if(e.which == 13){
+			e.preventDefault();
+			$('#notify-me').click();
+			return false;
+		}
+   });
 
 	function formSubmit () {
 		var email = $("#email-input").val();
 		var refer = $("#refer").html();
 		var ref = $("#referal_link").html();
-
-		console.log(ref);
 
 		if(validateEmail(email)){
 
@@ -48,7 +45,6 @@ $(function() {
 				url: '../email.php',
 				success: function(data) {
 					$("#modal").addClass("md-show");
-					console.log (data);
 				}
 			});
 

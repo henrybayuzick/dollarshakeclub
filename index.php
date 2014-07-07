@@ -7,7 +7,7 @@
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/base.min.js"></script>
+		<script src="js/getForm.js"></script>
 
 	</head>
 	<body>

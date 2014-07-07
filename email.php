@@ -1,8 +1,8 @@
 <?php
 	$dbHost = 'localhost';
 	$dbName = 'dollarshakeclub';
-	$dbUser = 'dollarshakeclub';
-	$dbPass = 'Whey2go!';
+	$dbUser = 'root';
+	$dbPass = 'root';
  
 	$mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 	
@@ -15,6 +15,7 @@
 	$referal_link = $_POST['referal_link'];
 
 	if ($email) {
+
 		$stmt = $mysqli->prepare("INSERT INTO Emails VALUES(?, 0, ?, 0)");
 
 		$stmt->bind_param("ss", $email, $refer);
