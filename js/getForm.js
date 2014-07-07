@@ -56,4 +56,4 @@ $(function() {
 			$("#notify-me").html("Invalid email");
 		}	
 	}
-});
+

@@ -23,6 +23,7 @@
 		if($getReferalCount->execute()){
 				$getReferalCount->bind_result($referalCount);
 				echo "got Referal count";
+				echo "<br> referal count:".$referalCount;
 		}
 		
 		$referalCount++;
